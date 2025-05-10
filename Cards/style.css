@@ -1,0 +1,85 @@
+/* Reset + Base Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: linear-gradient(to bottom, #e66465, #9198e5);
+}
+
+/* Container to center everything */
+.container {
+    max-width: fit-content;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Grid layout for all products */
+.product-grid {
+    display: flex;
+    flex-direction: row;
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+    gap: 30px;
+}
+
+/* Individual product card */
+.product-card {
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    text-align: center;
+}
+
+/* Product image */
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+/* Product title and price */
+.product-card h2 {
+    margin: 12px 0 8px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+.product-card h3 {
+    margin: 0 0 16px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #666;
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    margin: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button:nth-of-type(1) {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+button:nth-of-type(2) {
+    background-color: #f1f1f1;
+    color: #333;
+    border: 1px solid #ccc;
+}

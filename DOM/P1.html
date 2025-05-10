@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Projects</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            text-align: center;
+            color: #fff;
+            
+        }
+        .highlight {
+            background-color: yellowgreen;
+            font-weight: bold;
+            color: #1a1a1a;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>javascript fun Dom Examples and Projects</h1>
+    <section id="id1">
+        <h2>Acessing Dom elements</h2>
+        <p id="MyParagraph">This is a paragraph</p>
+        <button id="ChangeTextButton">Change Text</button>
+    </section>
+
+    <section id="Id2">
+        <h2>Traversing The City List</h2>
+        <ul id="citiesList">
+            <li>Bhilai</li>
+            <li>Durg</li>
+            <li>Bilaspur</li>
+            <li>Raipur</li>
+        </ul>
+        <button id="HighlightCity">HighLight The City</button>
+    </section>
+
+    <section>
+        <h2>Manupulating DOM Elements</h2>
+        <div id="CoffeeOrder">Order :
+            <span id="CoffeeType">Latte</span></div>
+        <button id="ChangeOrder">Change Order</button>
+    </section>
+
+    <section>
+        <h2>Creating And Inserting elements</h2>
+        <button id="AddItem">Add Item To The List</button>
+        <ul id="ShoppingList">
+            <li>Bread</li>
+            <li>Milk</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Removing An Dom Element</h2>
+        <ul id="TaskList">
+            <li>Task 1</li>
+            <li>Task 2</li>
+            <li>Task 3</li>
+        </ul>
+        <button id="RemoveTask">Remove The Last Task</button>
+    </section>
+
+    <section>
+        <h2>Event Handling In Dom</h2>
+        <button id="ClickMe">Click Me !</button>
+    </section>
+
+    <section>
+        <h2>Event Delegation</h2>
+        <ul id="ItemList">
+            <li class="Item">Pencil</li>
+            <li class="Item">Eraser</li>
+            <li class="Item">Sharpner</li>
+        </ul>
+        <p>Click On Any Item to Select It.</p>
+    </section>
+
+    <section>
+        <h2>Dom For Form Handling</h2>
+        <form id="FeedbackForm">
+            <label for="FeedbackInput"> Your Feedback :</label>
+            <input type="text" id="FeedbackInput" placeholder="Enter Feedback">
+            <button type="submit">Submit Feedback !</button>
+        </form>
+        <p id="FeedbackDisplay"></p>
+    </section>
+
+    <section>
+        <h2>Dom Enviornment</h2>
+        <p id="domStatus">Waiting for DOM to Load !!</p>
+
+    </section>
+
+    <section>
+        <h2>CSS Manipulator</h2>
+        <p id="descriptionText">
+            This Text will Change Colour !
+        </p>
+        <button id="toggleHighlight">
+            Toggle Highlight !
+        </button>
+    </section>
+    <script defer src="./scriptP1.js"></script>
+
+</body>
+</html>

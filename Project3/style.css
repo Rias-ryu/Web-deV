@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rubik+Mono+One&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Rubik Mono One', sans-serif;
+    background: linear-gradient(to bottom right, #0e0e1f, #1a1a2e);
+    color: #ffffff;
+    padding: 2rem;
+    
+}
+
+.container {
+    background: rgba(30, 30, 60, 0.9);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
+    max-width: 900px;
+    margin: auto;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #ff99ff;
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: 2px 2px #590059;
+    margin-bottom: 1rem;
+}
+
+#product-list, #cart-item {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.product-card {
+    background: #1f1f3a;
+    border: 2px solid #ff66cc;
+    border-radius: 15px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 0 12px rgba(255, 0, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-card span {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    word-break: break-word;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ff66cc;
+}
+
+button {
+    background: #ff33cc;
+    color: white;
+    font-family: 'Rubik Mono One', sans-serif;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #ff66cc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background: #ff66cc;
+    box-shadow: 0 0 25px #ff33cc;
+    transform: translateY(-2px);
+}
+
+#cart-total {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #ff99ff;
+}
+
+#empty-cart {
+    text-align: center;
+    font-style: italic;
+    color: #cccccc;
+}
+
+.hidden {
+    display: none;
+}
