@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Application</title>
+  <link rel="stylesheet" href="./output.css" />
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen flex items-center justify-center p-6">
+
+  <div class="w-full max-w-xl bg-gray-800 rounded-3xl shadow-xl p-8 space-y-8 transition-all duration-300">
+    
+    <!-- Quiz Heading -->
+    <h1 class="text-4xl font-bold text-center text-indigo-400 tracking-wide">
+      🚀 Quiz Application
+    </h1>
+    
+    <div id="quiz-container" class="space-y-6">
+      
+      <!-- Category Selection -->
+      <div id="category-selection-container" class="text-center space-y-4">
+        <h2 class="text-3xl font-bold text-indigo-400">Choose a Category</h2>
+        <button id="domestic-animals" class="category-button bg-indigo-500 text-white px-6 py-3 rounded-lg shadow-md">Domestic Animals</button>
+        <button id="fruits" class="category-button bg-green-500 text-white px-6 py-3 rounded-lg shadow-md">Fruits</button>
+        <button id="animal-sounds" class="category-button bg-yellow-500 text-white px-6 py-3 rounded-lg shadow-md">Animal Sounds</button>
+        <button id="body-parts" class="category-button bg-red-500 text-white px-6 py-3 rounded-lg shadow-md">Body Parts</button>
+        <button id="days-of-week" class="category-button bg-purple-500 text-white px-6 py-3 rounded-lg shadow-md">Days of the Week</button>
+      </div>
+
+      <!-- Question Section -->
+      <div id="question-container" class="hidden space-y-4">
+        <h2 id="question-text" class="text-2xl font-semibold text-white"></h2>
+        <ul id="choice-list" class="space-y-3">
+          <!-- Choices will be added dynamically -->
+        </ul>
+        <button id="next-button" class="hidden w-full py-2 px-4 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold rounded-lg shadow hover:shadow-lg transition duration-300">
+          Next Question
+        </button>
+      </div>
+
+      <!-- Loading Spinner
+      <div id="loading" class="hidden flex justify-center items-center">
+        <div class="h-10 w-10 border-4 border-indigo-500 border-t-transparent rounded-full animate-spinSlow"></div>
+      </div> -->
+
+      <!-- Result Section -->
+      <div id="result-container" class="hidden text-center space-y-4">
+        <h2 class="text-3xl font-bold text-teal-400">🎉 Your Score:</h2>
+        <p id="score" class="text-lg font-semibold text-white"></p>
+        <button id="restart-button" class="bg-gradient-to-r from-teal-500 to-green-500 text-white px-6 py-2 rounded-lg shadow hover:shadow-lg transition duration-300">
+          Restart Quiz
+        </button>
+      </div>
+
+      <!-- Start Button -->
+      <div class="text-center">
+        <button id="start-button" class="bg-gradient-to-r from-indigo-600 to-blue-500 text-white font-semibold px-6 py-3 rounded-xl shadow-md hover:shadow-indigo-400 transition-all duration-300 hidden">
+          Start Quiz
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
