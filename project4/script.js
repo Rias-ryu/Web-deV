@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded" , () => {
     })
 
     function renderExpense() {
+        updateTotal()
     ExpenseList.innerHTML = "";
 
     if (expenses.length !== 0) {
