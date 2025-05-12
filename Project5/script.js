@@ -11,46 +11,46 @@ const DomesticAnimals = [
     choices: ["Cat", "Cow", "Dog", "Goat"],
     answer: "Dog",
   },
-//   {
-//     question: "Which animal guards our house?",
-//     choices: ["Dog", "Horse", "Sheep", "Donkey"],
-//     answer: "Dog",
-//   },
-//   {
-//     question: "Which domestic animal gives us wool?",
-//     choices: ["Sheep", "Dog", "Cat", "Buffalo"],
-//     answer: "Sheep",
-//   },
-//   {
-//     question: "Which animal says 'Meow'?",
-//     choices: ["Dog", "Cow", "Cat", "Hen"],
-//     answer: "Cat",
-//   },
-//   {
-//     question: "Which animal carries loads?",
-//     choices: ["Monkey", "Donkey", "Cow", "Dog"],
-//     answer: "Donkey",
-//   },
-//   {
-//     question: "Which animal is used for riding?",
-//     choices: ["Cat", "Horse", "Sheep", "Pig"],
-//     answer: "Horse",
-//   },
-//   {
-//     question: "Which animal lives in a kennel?",
-//     choices: ["Cow", "Dog", "Hen", "Cat"],
-//     answer: "Dog",
-//   },
-//   {
-//     question: "Which animal gives us eggs?",
-//     choices: ["Hen", "Dog", "Cow", "Goat"],
-//     answer: "Hen",
-//   },
-//   {
-//     question: "Which animal says 'Moo'?",
-//     choices: ["Dog", "Cow", "Cat", "Sheep"],
-//     answer: "Cow",
-//   }
+  {
+    question: "Which animal guards our house?",
+    choices: ["Dog", "Horse", "Sheep", "Donkey"],
+    answer: "Dog",
+  },
+  {
+    question: "Which domestic animal gives us wool?",
+    choices: ["Sheep", "Dog", "Cat", "Buffalo"],
+    answer: "Sheep",
+  },
+  {
+    question: "Which animal says 'Meow'?",
+    choices: ["Dog", "Cow", "Cat", "Hen"],
+    answer: "Cat",
+  },
+  {
+    question: "Which animal carries loads?",
+    choices: ["Monkey", "Donkey", "Cow", "Dog"],
+    answer: "Donkey",
+  },
+  {
+    question: "Which animal is used for riding?",
+    choices: ["Cat", "Horse", "Sheep", "Pig"],
+    answer: "Horse",
+  },
+  {
+    question: "Which animal lives in a kennel?",
+    choices: ["Cow", "Dog", "Hen", "Cat"],
+    answer: "Dog",
+  },
+  {
+    question: "Which animal gives us eggs?",
+    choices: ["Hen", "Dog", "Cow", "Goat"],
+    answer: "Hen",
+  },
+  {
+    question: "Which animal says 'Moo'?",
+    choices: ["Dog", "Cow", "Cat", "Sheep"],
+    answer: "Cow",
+  }
 ];
 
 const FruitQuestions = [
@@ -350,7 +350,7 @@ function showQuestion(){
 }
 
 function selectAnswer(choice){
-    
+
     ChoiceList.querySelectorAll("li").forEach(item => item.classList.remove("bg-blue-200"));
 
     // Highlight the selected choice
