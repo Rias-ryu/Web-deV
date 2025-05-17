@@ -1,8 +1,10 @@
+import 'dotenv/config'
+
 import express from "express"
 
 const app = express()
 
-const port = 3001
+const port = process.env.port || 3001
 
 app.get('/' , (req,res) => {
     res.send("hello from express server")
@@ -50,7 +52,7 @@ app.put('/users/:id' , (req , res)=>{
     }
 })
 
-    app.delete('/users/:id', (req, res) => {
+app.delete('/users/:id', (req, res) => {
     const idToDelete = parseInt(req.params.id);
     const index = userdata.findIndex(t => t.UserId === idToDelete);
 
