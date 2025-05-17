@@ -1,11 +1,28 @@
 import 'dotenv/config'
-
 import express from "express"
+import logger from './logger.js'
+import morgan from 'morgan'
+
 
 const app = express()
-
 const port = process.env.port || 3001
 
+const morganformat = ':method :url :status :response-time ms'
+
+app.use(morgan(morganformat , {
+    stream: {
+        write: (message) =>{
+            const logObject = {
+                method : message.split(' ')[0],
+                url : message.split(' ')[1],
+                status : message.split(' ')[2],
+                responseTime : message.split(' ')[3]
+
+            }
+            logger.info(JSON.stringify(logObject))
+        }
+    }
+}))
 app.get('/' , (req,res) => {
     res.send("hello from express server")
 })
@@ -28,7 +45,7 @@ let userdata = []
 let id = 1
 
 app.post('/users' ,  (req,res)=>{
-    console.log("post");
+    // console.log("post");
     
     const {name , mail} = req.body
     const newuser = {UserId : id++ , name , mail}

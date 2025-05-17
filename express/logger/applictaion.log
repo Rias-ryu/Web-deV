@@ -1,0 +1,4 @@
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/users\",\"status\":\"201\",\"responseTime\":\"28.460\"}","timestamp":"2025-05-17T17:11:34.536Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/users\",\"status\":\"201\",\"responseTime\":\"3.177\"}","timestamp":"2025-05-17T17:11:58.125Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/users\",\"status\":\"201\",\"responseTime\":\"1.903\"}","timestamp":"2025-05-17T17:11:59.398Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/users\",\"status\":\"202\",\"responseTime\":\"1.320\"}","timestamp":"2025-05-17T17:12:04.366Z"}
