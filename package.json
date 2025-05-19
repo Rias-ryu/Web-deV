@@ -5,6 +5,7 @@
   "dependencies": {
     "@tailwindcss/cli": "^4.1.4",
     "bootstrap": "^5.3.5",
+    "mongoose-aggregate-paginate-v2": "^1.1.4",
     "react": "^19.1.0",
     "tailwindcss": "^4.1.4"
   }
