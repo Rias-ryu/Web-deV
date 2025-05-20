@@ -1,25 +1,52 @@
 import { v2 as cloudinary } from "cloudinary";
-import fs from "fs"
+import fs from "fs";
+import dotenv from "dotenv"
 
-// cloudinary config
-cloudinary.config({
+dotenv.config()
 
-    cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
-    api_key: process.env.CLOUDINARY_API_KEY,
-    api_secret: process.env.CLOUDINARY_API_SECRET
-})
+
+// Cloudinary config
+cloudinary.config({ 
+        cloud_name: 'arman21', 
+        api_key: '862339931439313', 
+        api_secret: 'GejSw37ey4ZBW8hUGEQapuOpPrY' // Click 'View API Keys' above to copy your API secret
+    });
+// console.log("cloudinary.config",{
+//   cloud_name,
+//   api_key: process.env.CLOUDINARY_API_KEY,
+//   api_secret: process.env.CLOUDINARY_API_SECRET
+// });
 
 const uploadOnCloudinary = async (localFilePath) => {
-    try {
-        if (!localFilePath) return null
-        const response = await cloudinary.uploader.upload(localFilePath , { resource_type:"auto"})
-        console.log(`file is Uploading on cloudinary ${response.url}`);
-        fs.unlinkSync(localFilePath)
-        return response        
-    } catch (error) {
-        fs.unlinkSync(localFilePath)
-        return null
-    }
-}
+  try {
+    if (!localFilePath) return null;
 
-export {uploadOnCloudinary}
+    const response = await cloudinary.uploader.upload(localFilePath, {
+      resource_type: "auto"
+    });
+
+    console.log(`File uploaded to Cloudinary: ${response.url}`);
+
+    // Delete from local
+    try {
+      fs.unlinkSync(localFilePath);
+    } catch (err) {
+      console.warn("Failed to delete local file:", err);
+    }
+
+    return response;
+  } catch (error) {
+    console.error("Cloudinary upload failed:", error);
+
+    // Safe unlink in case upload failed
+    try {
+      fs.unlinkSync(localFilePath);
+    } catch (err) {
+      console.warn("Failed to delete local file after error:", err);
+    }
+
+    return null;
+  }
+};
+
+export { uploadOnCloudinary };
