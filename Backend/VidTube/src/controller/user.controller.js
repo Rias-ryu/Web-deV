@@ -21,8 +21,8 @@ const registerUser = asyncHandler(async (req , res)=>{
         throw new ApiError(401, 'User Already Exist')
    }
 
-   const avatarlocalPath = req.files?.avatar[0]?.path
-   const coverlocalPath = req.files?.coverImage[0]?.path
+   const avatarlocalPath = req.files?.avatar?.[0]?.path
+   const coverlocalPath = req.files?.coverImage?.[0]?.path
 
    if (!avatarlocalPath) {
         throw new ApiError(402, 'Avatar File Missing')
@@ -57,6 +57,7 @@ const registerUser = asyncHandler(async (req , res)=>{
    .status(201)
    .json(new ApiResponse(200 , createdUser , "User Registered Sucessfully"))
 })
+
 
 
 export {registerUser}
